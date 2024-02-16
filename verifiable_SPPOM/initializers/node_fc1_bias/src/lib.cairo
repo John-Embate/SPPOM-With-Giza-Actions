@@ -1,0 +1,10 @@
+use orion::operators::tensor::{FP16x16Tensor, Tensor, TensorTrait};
+use orion::numbers::{FixedTrait, FP16x16};
+
+fn get_node_fc1_bias() -> Tensor<FP16x16> {
+    let mut shape = array![50];
+
+    let mut data = array![FP16x16 { mag: 16934, sign: true }, FP16x16 { mag: 4236, sign: false }, FP16x16 { mag: 97166, sign: false }, FP16x16 { mag: 131309, sign: true }, FP16x16 { mag: 58056, sign: false }, FP16x16 { mag: 169665, sign: true }, FP16x16 { mag: 126457, sign: true }, FP16x16 { mag: 120185, sign: false }, FP16x16 { mag: 67125, sign: false }, FP16x16 { mag: 230679, sign: true }, FP16x16 { mag: 357068, sign: false }, FP16x16 { mag: 150538, sign: true }, FP16x16 { mag: 286700, sign: false }, FP16x16 { mag: 86832, sign: false }, FP16x16 { mag: 130732, sign: false }, FP16x16 { mag: 102451, sign: false }, FP16x16 { mag: 216713, sign: false }, FP16x16 { mag: 164654, sign: false }, FP16x16 { mag: 284934, sign: false }, FP16x16 { mag: 8716, sign: true }, FP16x16 { mag: 251618, sign: false }, FP16x16 { mag: 127142, sign: false }, FP16x16 { mag: 153230, sign: false }, FP16x16 { mag: 99186, sign: false }, FP16x16 { mag: 149475, sign: true }, FP16x16 { mag: 256171, sign: false }, FP16x16 { mag: 15769, sign: true }, FP16x16 { mag: 237895, sign: false }, FP16x16 { mag: 82027, sign: false }, FP16x16 { mag: 83105, sign: true }, FP16x16 { mag: 306988, sign: false }, FP16x16 { mag: 267659, sign: false }, FP16x16 { mag: 19389, sign: true }, FP16x16 { mag: 150290, sign: true }, FP16x16 { mag: 220618, sign: true }, FP16x16 { mag: 55336, sign: true }, FP16x16 { mag: 132994, sign: false }, FP16x16 { mag: 148398, sign: false }, FP16x16 { mag: 84836, sign: true }, FP16x16 { mag: 12696, sign: false }, FP16x16 { mag: 164493, sign: true }, FP16x16 { mag: 24620, sign: false }, FP16x16 { mag: 114344, sign: false }, FP16x16 { mag: 127380, sign: true }, FP16x16 { mag: 187940, sign: false }, FP16x16 { mag: 234996, sign: true }, FP16x16 { mag: 84046, sign: false }, FP16x16 { mag: 106049, sign: false }, FP16x16 { mag: 106376, sign: true }, FP16x16 { mag: 133559, sign: true }];
+
+    TensorTrait::new(shape.span(), data.span())
+}
